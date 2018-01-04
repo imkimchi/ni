@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "nodemon --exec babel-node index.js app /Users/philipyoonshin_spryfit/spryfit-node",
+    "debug": "nodemon --exec babel-node index.js app /Users/philipyoonshin_spryfit/spryfit-node",
     "build": "npx babel src/index.js --out-file index.js"
   },
   "author": "",
