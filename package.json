@@ -20,6 +20,8 @@
     "fs-extra": "^5.0.0",
     "npm-programmatic": "0.0.9"
   },
+  "url": "https://github.com/imkimchi/use--save",
+  "email": "wbvcos@gmail.com",
   "bin": {
     "use--save": "./index.js"
   }
