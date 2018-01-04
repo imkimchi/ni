@@ -1,8 +1,9 @@
+
+<p align="center">
+  <img src="https://media0.giphy.com/media/3osxY5DBiplbJ47i4o/giphy.gif"/>
+</p>
+
 # USE --save WHEN YOU INSTALL DEPENDENCIES. PLEASE
-if you need this module for your project, I guess you are in pretty fucked up situation.
-
-tell your team to use `--save` option when they install dependencies. thanks.
-
 ## Install
 
 `npm i -g use--save`
