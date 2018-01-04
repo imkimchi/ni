@@ -1,0 +1,26 @@
+{
+  "name": "dependency-check",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon --exec babel-node index.js app /Users/philipyoonshin_spryfit/spryfit-node",
+    "build": "npx babel src/index.js --out-file index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1"
+  },
+  "dependencies": {
+    "chalk": "^2.3.0",
+    "child-process-promise": "^2.2.1",
+    "fs-extra": "^5.0.0",
+    "npm-programmatic": "0.0.9"
+  },
+  "bin": {
+    "use--save": "./index.js"
+  }
+}
