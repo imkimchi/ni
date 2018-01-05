@@ -1,19 +1,26 @@
+# ni [![Build Status](https://travis-ci.org/imkimchi/ni.svg?branch=master)](https://travis-ci.org/imkimchi/ni) [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo)
 
-<p align="center">
-  <img src="https://media0.giphy.com/media/3osxY5DBiplbJ47i4o/giphy.gif"/>
-</p>
+> A better npm install
 
-# USE --save WHEN YOU INSTALL DEPENDENCIES. PLEASE
+## Why
+
+- install unspecified dependencies in package.json
+- show deprecated dependencies
+- no more unuseful log
+- a way better interface
+
+
 ## Install
 
-`npm i -g use--save`
+`npm install --global ni`
+
 
 ## Usage
 
-`use--save <file name> <folder path>`
+run `ni` without any arguments, when you are running in the project folder.
 
-you don't have to specifiy the folder path if you are running it in the project folder.
+If you want to specify the folder path, run `ni <folder path>`
 
 ## Feedback
 
-[leave an issue](https://github.com/imkimchi/use--save/issues)
+[leave an issue](https://github.com/imkimchi/ui/issues)
