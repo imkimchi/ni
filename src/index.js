@@ -48,7 +48,7 @@ let modsBeforeInstall,
         modsAfterInstall = await checkMods(directory)
         depSpinner.succeed()
 
-        let undepSpinner = ora("Check if there's unspecified dependencies in package.json")
+        let undepSpinner = ora("Check if there's unspecified dependencies")
 
         for(let line of codeArray) {
             if(re.test(line)) dependencies.push(line.match(re)[1])
