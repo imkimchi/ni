@@ -3,7 +3,7 @@
 > A better npm install
 
 
-![](https://media.giphy.com/media/26Ff8JyRwUdTfVOQo/giphy.gif)
+![](https://i.imgur.com/CBjl7LW.gif)
 
 ## Why
 
