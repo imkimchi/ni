@@ -2,6 +2,9 @@
 
 > A better npm install
 
+
+![](https://i.imgur.com/CBjl7LW.gif)
+
 ## Why
 
 - install unspecified dependencies in package.json
