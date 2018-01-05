@@ -21,7 +21,7 @@ let modsBeforeInstall,
     modsAfterInstall
 
 ;(async () => {
-    console.log(`\n 📦  ni, ${chalk.bold('A better npm install')} \n`)
+    console.log(`\n📦  ni, ${chalk.bold('A better npm install')} \n`)
     const depSpinner = ora('Installing Dependencies').start()
 
     let directory = process.argv[3] || process.cwd()
@@ -72,9 +72,9 @@ let modsBeforeInstall,
             await npm.install(unspecifiedDeps, npmOpt)
             unDepInstallSpinner.succeed()
 
-            colored('Installed Unspecified List:', 'magenta')
+            colored('blue', '\nInstalled Unspecified Dependencies:\n')
             for(let dep of unspecifiedDeps) {
-                console.log(`${chalk.gray(dep)}@${getLatest(dep)} ${chalk.green('✔︎')}`)
+                console.log(`${chalk.bold(dep)}${chalk.hex('#EC407A').bold('@')}${await getLatest(dep)} ${chalk.green('✔︎')}`)
             }
 
             successMsg(dependencies.length + unspecifiedDeps.length)
