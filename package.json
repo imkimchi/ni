@@ -7,7 +7,7 @@
     "debug": "nodemon --exec babel-node src/index.js app /Users/philipyoonshin_spryfit/spryfit-node",
     "debug-b": "lib/index.js app /Users/philipyoonshin_spryfit/spryfit-node",
     "build": "npx babel src --out-dir lib",
-    "test": "xo --ignore lib/npm.js --no-semicolon --space"
+    "test": "xo --ignore src/npm.js --no-semicolon --space"
   },
   "author": "",
   "license": "MIT",
