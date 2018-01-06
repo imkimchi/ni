@@ -1,29 +1,42 @@
 import ora from 'ora'
 import fs from 'fs-extra'
+import glob from 'glob-promise'
 import getPjson from './get-package-json'
 
-const checkExtension = file => file.includes('.js') ? file : `${file}.js`
-const depCheck = (str, obj) => (!str.startsWith('./') && !obj.hasOwnProperty(str))
+const depCheck = (str, obj) => !obj.hasOwnProperty(str)
 
-export default async (dir, filename) => {
-  const undepSpinner = ora(`Check if there's unspecified dependencies`)
-  const targetFile = checkExtension(filename)
-  const actualPath = `${dir}/${targetFile}`
-  const texts = await fs.readFile(actualPath, 'utf8')
-  const codeArray = texts.split('\n')
-  const re = /require\('(.*)'\)/
+const dependencies = []
+const unspecifiedDeps = []
 
-  const dependencies = []
-  const unspecifiedDeps = []
+export default async dir => {
+  const undepSpinner = ora(`Check if there's unspecified dependencies`).start()
 
-  for (const line of codeArray) {
-    if (re.test(line)) dependencies.push(line.match(re)[1])
+  const globOpt = {
+    ignore: ['**/node_modules/**'],
+    cwd: dir,
+    realpath: true
   }
+
+  const jsFiles = await glob('**/*.js', globOpt)
+
+  for (const js of jsFiles) {
+    const codes = await fs.readFile(js, 'utf8')
+    const re = /(?:from |require\()'([^/.][^/]*?)'/g
+    const matches = codes.match(re) ? codes.match(re).map(e => e.replace(re, '$1')) : []
+
+    for (const obj of matches) {
+      if (!dependencies.includes(obj)) {
+        dependencies.push(obj)
+      }
+    }
+  }
+
   for (const dep of dependencies) {
     if (depCheck(dep, await getPjson(dir))) {
       unspecifiedDeps.push(dep)
     }
   }
+
   undepSpinner.succeed()
 
   return {

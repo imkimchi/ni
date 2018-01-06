@@ -22,7 +22,7 @@ let modsBeforeInstall, modsAfterInstall
         modsAfterInstall = await initialInstall(dir, depSpinner)
     }
 
-    let res = await checkUnSpecDeps(dir, process.argv[2])
+    let res = await checkUnSpecDeps(dir)
 
     if(res.unspecifiedDeps.length) unspecifiedDeps(res.deps, res.unspecifiedDeps, dir)
     else noUnspecifiedDeps(res.deps, modsBeforeInstall, modsAfterInstall)

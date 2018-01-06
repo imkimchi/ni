@@ -12,12 +12,12 @@ async function getLatest(dep) {
   return res.stdout.replace('\n', '')
 }
 
-export default async (dependencies, unspecifiedDeps, directory) => {
+export default async (dependencies, unspecifiedDeps, dir) => {
   const unDepInstallSpinner = ora('Installing Unspecified Dependencies').start()
 
   try {
     const npmOpt = {
-      cwd: directory,
+      cwd: dir,
       save: true
     }
 
