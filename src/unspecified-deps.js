@@ -1,35 +1,36 @@
-import { exec } from 'child-process-promise'
-import successMsg from './success'
+import {exec} from 'child-process-promise'
 import chalk from 'chalk'
-import npm from './npm'
 import ora from 'ora'
+
+import successMsg from './success'
+import npm from './npm'
 
 const colored = (color, msg) => console.log(chalk[color](msg))
 
-async function getLatest (dep) {
-  const res = await exec(`npm show ${dep} version`)
-  return res.stdout.replace('\n', '')
+async function getLatest(dep) {
+	const res = await exec(`npm show ${dep} version`)
+	return res.stdout.replace('\n', '')
 }
 
 export default async (dependencies, unspecifiedDeps, directory) => {
-  const unDepInstallSpinner = ora('Installing Unspecified Dependencies').start()
+	const unDepInstallSpinner = ora('Installing Unspecified Dependencies').start()
 
-  try {
-      const npmOpt = {
-          cwd: directory,
-          save: true
-      }
-      
-      await npm.install(unspecifiedDeps, npmOpt)
-      unDepInstallSpinner.succeed()
+	try {
+		const npmOpt = {
+			cwd: directory,
+			save: true
+		}
 
-      colored('blue', '\nInstalled Unspecified Dependencies:\n')
-      for(let dep of unspecifiedDeps) {
-          console.log(`${chalk.bold(dep)}${chalk.hex('#EC407A').bold('@')}${await getLatest(dep)} ${chalk.green('✔︎')}`)
-      }
+		await npm.install(unspecifiedDeps, npmOpt)
+		unDepInstallSpinner.succeed()
 
-      successMsg(dependencies.length + unspecifiedDeps.length)
-  } catch (err) {
-      console.error(`${chalk.redBright('Failed:')} ${err}`)
-  }
+		colored('blue', '\nInstalled Unspecified Dependencies:\n')
+		for (const dep of unspecifiedDeps) {
+			console.log(`${chalk.bold(dep)}${chalk.hex('#EC407A').bold('@')}${await getLatest(dep)} ${chalk.green('✔︎')}`)
+		}
+
+		successMsg(dependencies.length + unspecifiedDeps.length)
+	} catch (err) {
+		console.error(`${chalk.redBright('Failed:')} ${err}`)
+	}
 }

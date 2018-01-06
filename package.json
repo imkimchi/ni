@@ -7,7 +7,7 @@
     "debug": "nodemon --exec babel-node src/index.js app /Users/philipyoonshin_spryfit/spryfit-node",
     "debug-b": "lib/index.js app /Users/philipyoonshin_spryfit/spryfit-node",
     "build": "npx babel src --out-dir lib",
-    "test": "xo --ignore src/npm.js --no-semicolon --space"
+    "test": "xo --fix"
   },
   "author": "",
   "license": "MIT",
@@ -27,6 +27,15 @@
   "url": "https://github.com/imkimchi/ni",
   "email": "wbvcos@gmail.com",
   "bin": {
-    "ui": "./index.js"
+    "ni": "./index.js"
+  },
+  "xo": {
+    "ignores": ["src/npm.js"],
+    "semicolon": false,
+    "rules": {
+      "curly": 0,
+      "no-await-in-loop": 0,
+      "no-prototype-builtins": 0
+    }
   }
 }
