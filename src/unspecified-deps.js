@@ -8,29 +8,29 @@ import npm from './npm'
 const colored = (color, msg) => console.log(chalk[color](msg))
 
 async function getLatest(dep) {
-	const res = await exec(`npm show ${dep} version`)
-	return res.stdout.replace('\n', '')
+  const res = await exec(`npm show ${dep} version`)
+  return res.stdout.replace('\n', '')
 }
 
 export default async (dependencies, unspecifiedDeps, directory) => {
-	const unDepInstallSpinner = ora('Installing Unspecified Dependencies').start()
+  const unDepInstallSpinner = ora('Installing Unspecified Dependencies').start()
 
-	try {
-		const npmOpt = {
-			cwd: directory,
-			save: true
-		}
+  try {
+    const npmOpt = {
+      cwd: directory,
+      save: true
+    }
 
-		await npm.install(unspecifiedDeps, npmOpt)
-		unDepInstallSpinner.succeed()
+    await npm.install(unspecifiedDeps, npmOpt)
+    unDepInstallSpinner.succeed()
 
-		colored('blue', '\nInstalled Unspecified Dependencies:\n')
-		for (const dep of unspecifiedDeps) {
-			console.log(`${chalk.bold(dep)}${chalk.hex('#EC407A').bold('@')}${await getLatest(dep)} ${chalk.green('✔︎')}`)
-		}
+    colored('blue', '\nInstalled Unspecified Dependencies:\n')
+    for (const dep of unspecifiedDeps) {
+      console.log(`${chalk.bold(dep)}${chalk.hex('#EC407A').bold('@')}${await getLatest(dep)} ${chalk.green('✔︎')}`)
+    }
 
-		successMsg(dependencies.length + unspecifiedDeps.length)
-	} catch (err) {
-		console.error(`${chalk.redBright('Failed:')} ${err}`)
-	}
+    successMsg(dependencies.length + unspecifiedDeps.length)
+  } catch (err) {
+    console.error(`${chalk.redBright('Failed:')} ${err}`)
+  }
 }

@@ -32,6 +32,7 @@
   "xo": {
     "ignores": ["src/npm.js"],
     "semicolon": false,
+    "space": 2,
     "rules": {
       "curly": 0,
       "no-await-in-loop": 0,
