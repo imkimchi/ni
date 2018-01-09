@@ -15,14 +15,14 @@
 
 ## Install
 
-`npm install --global ni`
+`npm i -g better-npm-install"`
 
 
 ## Usage
 
 run `ni` without any arguments, when you are running in the project folder.
 
-If you want to specify the folder path, run `ni <file name> <folder path>`
+If you want to specify the folder path, run `ni <folder path>`
 
 ## Having any issue?
 
