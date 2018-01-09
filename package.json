@@ -9,7 +9,7 @@
     "build": "npx babel src --out-dir lib",
     "test": "xo --fix"
   },
-  "author": "",
+  "author": "Philip Yoonshin",
   "license": "MIT",
   "devDependencies": {
     "babel-cli": "^6.26.0",
