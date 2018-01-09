@@ -1,6 +1,4 @@
 #!/usr/bin/env node
-import 'babel-polyfill'
-
 import chalk from 'chalk'
 import ora from 'ora'
 import initialInstall from './init'

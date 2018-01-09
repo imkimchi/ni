@@ -13,12 +13,12 @@
   "license": "MIT",
   "devDependencies": {
     "babel-cli": "^6.26.0",
-    "babel-polyfill": "^6.26.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.6.1",
     "xo": "^0.18.2"
   },
   "dependencies": {
-    "babel-polyfill": "^6.26.0",
+    "babel-runtime": "^6.26.0",
     "chalk": "^2.3.0",
     "child-process-promise": "^2.2.1",
     "fs-extra": "^5.0.0",
