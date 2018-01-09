@@ -7,13 +7,10 @@ import noUnspecifiedDeps from './no-unspecified-deps'
 import checkUnSpecDeps from './check-unspecified-deps'
 import getPkgCounts from './get-pkg-counts'
 
-let dir = process.argv[2] || process.cwd()
+let dir = process.argv[1] || process.cwd()
 let modsBeforeInstall, modsAfterInstall
 
-console.log("dir", dir, "@@", process.argv)
-
 ;(async () => {
-    console.log("dir", dir, "@@", process.argv)
     console.log(`\n📦  ni, ${chalk.bold('A better npm install')} \n`)
     const depSpinner = ora('Installing Dependencies').start()
     
