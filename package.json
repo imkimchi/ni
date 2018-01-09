@@ -1,9 +1,5 @@
 {
-<<<<<<< HEAD
   "name": "better-npm-install",
-=======
-  "name": "ni",
->>>>>>> cc3e14db411fb039420d2e5c1ae02e61c3a504ba
   "version": "1.1.1",
   "description": "",
   "main": "lib/index.js",
