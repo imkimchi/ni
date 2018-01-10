@@ -13,7 +13,7 @@ async function getLatest(dep) {
 }
 
 export default async (dependencies, unspecifiedDeps, dir) => {
-  const unDepInstallSpinner = ora('Installing Unspecified Dependencies').start()
+  const unDepInstallSpinner = ora('Installing Missing Dependencies').start()
 
   try {
     const npmOpt = {
@@ -24,7 +24,7 @@ export default async (dependencies, unspecifiedDeps, dir) => {
     await npm.install(unspecifiedDeps, npmOpt)
     unDepInstallSpinner.succeed()
 
-    colored('blue', '\nInstalled Unspecified Dependencies:\n')
+    colored('blue', '\nInstalled Missing Dependencies:\n')
     for (const dep of unspecifiedDeps) {
       console.log(`${chalk.bold(dep)}${chalk.hex('#EC407A').bold('@')}${await getLatest(dep)} ${chalk.green('✔︎')}`)
     }

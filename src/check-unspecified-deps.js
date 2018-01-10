@@ -9,7 +9,7 @@ const dependencies = []
 const unspecifiedDeps = []
 
 export default async dir => {
-  const undepSpinner = ora(`Check if there's unspecified dependencies`).start()
+  const undepSpinner = ora(`Check missing dependencies`).start()
 
   const globOpt = {
     ignore: ['**/node_modules/**'],
