@@ -7,23 +7,29 @@
 
 ## Why
 
-- install unspecified dependencies in package.json
-- show deprecated dependencies
-- no more unuseful log
-- a way better interface
+- Install dependencies that are missing from package.json
+- Show deprecated dependencies
+- No more unuseful log
+- A way better interface
 
 
 ## Install
 
-`npm i -g better-npm-install"`
+`npm i -g better-npm-install`
 
 
 ## Usage
 
+```
+$ ni <folder>
+```
+
 run `ni` without any arguments, when you are running in the project folder.
 
-If you want to specify the folder path, run `ni <folder path>`
 
-## Having any issue?
+## Having any issues?
 
-[leave an issue](https://github.com/imkimchi/ui/issues). I'm active 24hrs.
+If you are having any issues or have feature request,
+
+
+[leave an issue](https://github.com/imkimchi/ni/issues). I'm active 24hrs.
