@@ -1,8 +1,6 @@
 {
   "name": "better-npm-install",
   "version": "1.2.2",
-  "description": "",
-  "main": "lib/index.js",
   "scripts": {
     "debug": "nodemon --exec babel-node src/index.js app /Users/project",
     "debug-b": "lib/index.js app /home/project",
