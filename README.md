@@ -4,7 +4,7 @@
 
 ## Why
 
-- Install missing dependencies from package.json
+- Install missing dependencies from package.json that npm won't install them for you
 - Show deprecated dependencies
 - No more unuseful log
 - A way better interface
