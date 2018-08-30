@@ -10,6 +10,7 @@ import getPkgCounts from './get-pkg-counts'
 let dir = process.argv[2] || process.cwd()
 let modsBeforeInstall, modsAfterInstall
 
+console.log("updated wtf")
 console.log(process.argv[2], process.cwd(), dir)
 
 ;(async () => {
