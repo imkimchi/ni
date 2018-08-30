@@ -4,7 +4,7 @@
 
 ## Why
 
-- Install dependencies that are missing from package.json
+- Install missing dependencies from package.json
 - Show deprecated dependencies
 - No more unuseful log
 - A way better interface
