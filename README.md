@@ -2,13 +2,6 @@
 
 ![](https://i.imgur.com/VH4pSYx.gif)
 
-## Why
-
-- Install missing dependencies from package.json that npm won't install them for you
-- Show deprecated dependencies
-- No more unuseful log
-- A way better interface
-
 
 ## Install
 
@@ -21,7 +14,15 @@
 $ ni <folder>
 ```
 
-run `ni` without any arguments, when you are running in the project folder.
+Run `ni` without any arguments, when you are running in the project folder.
+
+
+## Why
+
+- Install missing dependencies from package.json that npm won't install them for you
+- Show deprecated dependencies
+- No more unuseful log
+- A way better interface
 
 
 ## Having any issues?
