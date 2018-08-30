@@ -13,6 +13,9 @@ let modsBeforeInstall, modsAfterInstall
 console.log(process.argv[1], process.cwd())
 
 ;(async () => {
+
+console.log("@#$!@#$ewrgwrgwejrgewijgwreigjweg")
+
     console.log(`\n📦  ni, ${chalk.bold('A better npm install')} \n`)
     const depSpinner = ora('Installing Dependencies').start()
     
