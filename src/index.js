@@ -10,11 +10,7 @@ import getPkgCounts from './get-pkg-counts'
 let dir = process.argv[2] || process.cwd()
 let modsBeforeInstall, modsAfterInstall
 
-console.log("updated wtf")
-console.log(process.argv[2], process.cwd(), dir)
-
 ;(async () => {
-
     console.log(`\n📦  ni, ${chalk.bold('A better npm install')} \n`)
     const depSpinner = ora('Installing Dependencies').start()
     
