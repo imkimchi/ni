@@ -1,6 +1,6 @@
 # ni [![Build Status](https://travis-ci.org/imkimchi/ni.svg?branch=master)](https://travis-ci.org/imkimchi/ni) [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo)
 
-![](https://i.imgur.com/VH4pSYx.gif)
+<img src="https://i.imgur.com/VH4pSYx.gif" width=500/>
 
 ## Install
 
