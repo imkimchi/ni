@@ -28,7 +28,7 @@ run `ni` without any arguments, when you are running in the project folder.
 
 I came up with this idea because I get really fraustrated when other developers don't save dependencies to `package.json` when they install dependency so I have to install them manually checking all the codes in the project. I hope it can be useful for y'all 💘
 
-## Having any issues?
+## Having an issue?
 
 If you are having any issues or have feature request,
 
